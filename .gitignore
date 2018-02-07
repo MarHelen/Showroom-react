@@ -5,4 +5,5 @@ server-side/
 *.log
 *.sql
 *node_modules/*
+static/node_modules/
 
