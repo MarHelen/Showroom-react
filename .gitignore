@@ -1,0 +1,8 @@
+server-side/
+.DS_Store
+.DS_Store?
+*.pyc
+*.log
+*.sql
+*node_modules/*
+
