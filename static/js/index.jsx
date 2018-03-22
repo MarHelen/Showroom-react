@@ -1,6 +1,9 @@
 // index.jsx
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App.jsx";
+import AppRouter from "./AppRouter.jsx";
+import '../styles/styles.scss';
+import 'normalize.css/normalize.css'
 
-ReactDOM.render(<App />, document.getElementById("content"));
+
+ReactDOM.render(<AppRouter/>, document.getElementById("content"));
