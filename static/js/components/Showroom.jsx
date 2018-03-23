@@ -14,9 +14,12 @@ class Showroom extends React.Component {
   const PageComponent = data.find(page => page.link === url).property;
 */
   render () {
+  	let shop = this.props.location.state.shop;
+  	console.log(shop);
+
     return (
     	<div>
-      <Navigation name={this.props.name}/>
+      <Navigation name={shop.name}/>
   
        </div> 
     	)

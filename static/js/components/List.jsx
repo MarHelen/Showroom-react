@@ -10,9 +10,18 @@ import ListShopPanel from './ListShopPanel';
 class List extends React.Component {
 	state = {
 			shops : [
-			{id: 1, name: 'shop1', address: 'address1', pic: "pic_url", tags: ['women','decor']},
-			{id: 2, name: 'shop2', address: 'address2', pic: "pic_url2", tags: ['men', 'shoes']},
-			{id: 3, name: 'shop3', address: 'address3', pic: "pic_url3", tags: ['women', 'accessories']},
+			{id: 1, name: 'shop1', address: 'address1', pic: "pic_url", tags: ['women','decor'], details: '', social: {
+		        	fb_link: 'http://',
+		        	insta_link: 'http://'
+		        }},
+			{id: 2, name: 'shop2', address: 'address2', pic: "pic_url2", tags: ['men', 'shoes'], details: '', social: {
+		        	fb_link: 'http://',
+		        	insta_link: 'http://'
+		        }},
+			{id: 3, name: 'shop3', address: 'address3', pic: "pic_url3", tags: ['women', 'accessories'], details: '', social: {
+		        	fb_link: 'http://',
+		        	insta_link: 'http://'
+		        }},
 			],
 			filters: [],
             filterOptions: [
