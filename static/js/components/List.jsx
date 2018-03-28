@@ -69,6 +69,15 @@ class List extends React.Component {
          this.setState( {filterValue: e.target.value} );
     }
 
+    filterShops = (tags) => {
+    	let flag = true;
+        this.state.filters.map((filterItem) => {
+            if (tags.indexOf(filterItem) === -1)
+            	{ flag = false; }
+        })
+        return flag;
+    }
+
 	render(){
 		return (
                 <div className="list">
@@ -86,15 +95,9 @@ class List extends React.Component {
                     />
 
                     <ListShopPanel 
-                        shops = { //filter shops by tags to display
+                        shops = { //filter shops by tags to display in ShopPanel
                         	this.state.shops.filter((shop) => {
-                        		let flag = true;
-                        		this.state.filters.map((filterItem) => {
-                        			if (shop.tags.indexOf(filterItem) === -1){
-                        				flag = false;
-                        			}
-                        		})
-                        		return flag;	
+                        		return this.filterShops(shop.tags);
                         	})
                         } 
                     />

@@ -6,3 +6,36 @@ body {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 1.6rem;
 }
+
+.social_logo {
+	width: 20;
+	heigth: 20; 
+}
+
+.profile_pic_small {
+	width: 100;
+}
+
+.profile_pic_large {
+	width: 300;
+	height: 300
+}
+
+.logo {
+	width: 25;
+	heigth: 25;
+}
+
+.serviceName {
+	display: flex;
+}
+
+#block_container > div {
+	display: inline-block;
+}
+
+@media (min-width: 768px){
+  .container{
+    max-width:100%;
+  }  
+}

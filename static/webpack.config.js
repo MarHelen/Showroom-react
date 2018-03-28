@@ -4,6 +4,7 @@ const config = {
     output: {
         path: __dirname + '/dist',
         filename: 'bundle.js',
+        //publicPath: __dirname + '/dist'
     },
     module: {
         rules: [
@@ -17,7 +18,27 @@ const config = {
               'css-loader',
               'sass-loader'
           ]
-        }
+        },
+        /*{
+          test: /\.(jpg|png|gif|ico)$/,
+          use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]'
+              },
+          },
+          ]
+        },*/
+        {
+          test: /\.(jpg|png|jpeg)$/,
+          use: {
+            loader: "url-loader",
+            options: {
+              limit: 25000000,
+            },
+          },
+        },
       ]
     },
     resolve: {

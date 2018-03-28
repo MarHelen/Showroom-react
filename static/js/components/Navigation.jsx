@@ -2,31 +2,31 @@
 
 import React from "react";
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
-//import { PageHeader } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
-class Navigation extends React.Component {
-    render(){
-    console.log(this.props);
+const logo = require('!!url-loader!../../img/shop.jpeg');
 
+const Navigation = (props) => {
     return (
       <Navbar>
         <Navbar.Header>
           <Navbar.Brand>
-            <a href="#home">Kyiv Showrooms</a>
+              <Link to='/'>
+                  <div id='block_container'>
+                  <img className='logo' src={logo}/>
+                  Kyiv Showrooms
+                  </div>
+              </Link>
           </Navbar.Brand>
         </Navbar.Header>
           <Nav>
-            {!this.props.name && <NavItem eventKey={1} href="#map">Map</NavItem>}
-            {!this.props.name && <NavItem eventKey={2} href="#list">Showroom List</NavItem>}
-            {this.props.name && <NavItem eventKey={1} href="#home">{this.props.name}</NavItem>}
+            {!props.name && <NavItem eventKey={1} href="#map">Map</NavItem>}
+            {!props.name && <NavItem eventKey={2} href="#list">Showroom List</NavItem>}
+            {props.name && <NavItem eventKey={1} >{props.name}</NavItem>}
           </Nav>
       </Navbar>
     	)
-  }
 };
 
-//Navigation.defaultProps = {
-//  name : undefined
-//};
 
 export default Navigation;

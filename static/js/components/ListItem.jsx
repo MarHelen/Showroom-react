@@ -26,13 +26,20 @@ class ListItem extends React.Component {
                             componentClass="h3" 
                             onClick={this.togglePanel} 
                             style={{cursor:'pointer'}}>
-                                 {this.props.shop.name}
+                            <p>
+                                {this.props.shop.name}
+                            </p>
+                            <p className='small'>
+                                {this.props.shop.tags.map((tag) => (tag+' '))}
+
+                            </p>
                         </Panel.Title>
                     </Panel.Heading>
 
                     <ListItemContent 
                         show={this.state.visibility}
                         shop={this.props.shop}
+                        size='small'
                     />
                 </Panel>
             </div>

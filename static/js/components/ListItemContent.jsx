@@ -1,43 +1,58 @@
 //ListItemContent.jsx
 
 import React from 'react';
-import { Panel } from 'react-bootstrap';
+import { Panel, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+
+//const fb_logo = require('../images/fb.jpg');
+//import fb_logo from './../../img/fb.jpg'
+//import fb_logo from '!url-loader!./fb.jpg';
+const insta_logo = require('!!url-loader!../../img/inst.png');
+const fb_logo = require('../../img/fb.jpg');
+//let fb = String('/' + fb_logo);
+
 
 const ListItemContent = (props) => {
 		return(
 			<div>
                 {props.show && <Panel.Body>
 
-                	<div className='col-sm-3'>
-                	    <img src={props.shop.pic} />
+                	<div className='col-lg-3'>
+                	    <Image className={'profile_pic_'+props.size} src={props.shop.pic} thumbnail />
                 	</div>
 
-                	<div className='col-sm-7'>
+                	<div className='col-lg-7'>
                 	    <div className='shopDetailsBlock'>
-                	        <p>{props.shop.details} 
+                	        {props.size==='small' &&
+                	        <p>
+                	            {props.shop.details} 
                 	            <Link 
-                	                //to={'/showrooms/' + props.shop.id}
-                	                //params={{ shop: props.shop }}> 
+                	               
                 	                to={{
                 	                	pathname: '/showrooms/' + props.shop.id,
                 	                	state: {shop: props.shop}
                 	                }}>
                 	                more...
                 	            </Link>
-                	        </p>
+                	        </p>}
+
+                	        {props.size==='large' &&
+                            <p>
+                                {props.shop.details}
+                            </p>}
+
                 	    </div>
 
                 	    <div className='shopAddressBlock'>
                 	        <p>
-                	            Address: {props.shop.address}
+                	            <strong>address:</strong> {props.shop.address}
                 	        </p>
                 	    </div>
 
                 	    <div className='shopSocialBlock'>
                 	        <p>
-                	        	{props.shop.social.fb_link && <a href={props.shop.social.fb_link}> <img src=''/> </a>}
-                	        	{props.shop.social.insta_link && <a href={props.shop.social.insta_link}> <img src=''/> </a>}
+                	        	{props.shop.social.fb_link && <a href={props.shop.social.fb_link}> <img className='social_logo' src={fb_logo} /> </a>}
+                	        	{props.shop.social.insta_link && <a href={props.shop.social.insta_link}> <img className='social_logo' src={insta_logo} /> </a>}
                 	        </p>
                 	    </div>
 
