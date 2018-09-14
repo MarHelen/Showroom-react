@@ -29,11 +29,11 @@ Each react-google-map *Marker* has an *InfoWindow* with showrt shop details. Som
 
 The list below contains a filter for provided tags.
 
-![](https://monosnap.com/file/4f47MWmFWQGc8f2aQhZD8RuYJnBXT4)
+![Tags](https://monosnap.com/file/4f47MWmFWQGc8f2aQhZD8RuYJnBXT4)
 
 Also each brand item can be expanded for checking it's short details as on Map.
 
-![](https://monosnap.com/file/PWlpIkBjkTLYAzYCBBOwaL6E9ZxENP)
+![Expand](https://monosnap.com/file/PWlpIkBjkTLYAzYCBBOwaL6E9ZxENP)
 
 Both Showroom details sources have links to the full page. Full showroom page contains more detailed description with contacts, social media links and a little sneak peak into it's Instagram page.
 
