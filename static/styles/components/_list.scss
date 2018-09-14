@@ -1,3 +1,63 @@
+// _list.scss
+
 .list {
 	margin: 20;
+}
+
+.listTitle {
+	font-family: 'Open Sans', sans-serif, 400,800i;
+}
+
+select {
+   font-family: Cursive;
+   height: 29px;
+   overflow: hidden;
+   width: 240px;
+	background: transparent;
+   border: none;
+   font-size: 14px;
+   background: $pink;
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+}
+
+select:after {
+  background: $pink;
+  position: absolute;
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  }
+
+  .formInput {
+  	margin-left:5px;
+  }
+
+.styled-select.slate {
+   height: 34px;
+   width: 240px;
+}
+
+.filterBox {
+	border: none;
+
+}
+
+.filterBox form {
+	border: none;
+
+}
+
+.filterButton {
+	margin-bottom: 10;
+	margin-right: 5;
+}
+
+input {
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
 }

@@ -9,30 +9,24 @@ import ListShopPanel from './ListShopPanel';
 
 class List extends React.Component {
 	state = {
-			shops : [
-			{id: 1, name: 'shop1', address: 'address1', pic: "pic_url", tags: ['women','decor'], details: '', social: {
-		        	fb_link: 'http://',
-		        	insta_link: 'http://'
-		        }},
-			{id: 2, name: 'shop2', address: 'address2', pic: "pic_url2", tags: ['men', 'shoes'], details: '', social: {
-		        	fb_link: 'http://',
-		        	insta_link: 'http://'
-		        }},
-			{id: 3, name: 'shop3', address: 'address3', pic: "pic_url3", tags: ['women', 'accessories'], details: '', social: {
-		        	fb_link: 'http://',
-		        	insta_link: 'http://'
-		        }},
-			],
+
 			filters: [],
             filterOptions: [
-                'choose option...',
+                'choose filter...',
                 'men',
                 'women',
                 'decor',
                 'shoes',
-                'accessories'
+                'accessories',
+                'home',
+                'plants',
+                'handbags',
+                'kids',
+                'beauty',
+                'underwear',
+                'clothing'
                 ],
-            filterValue: 'choose option...'
+            filterValue: ''
 		}
 
     addFilterTag = (label) => {
@@ -57,10 +51,10 @@ class List extends React.Component {
     handleSubmitFilter = (e) => { 
     	e.preventDefault();
     	console.log(e);
-    	if (this.state.filterValue !== 'choose option...') {
+    	if (this.state.filterValue !== 'choose filter...') {
     	    this.addFilterTag(this.state.filterValue);  
         }
-        this.setState( {filterValue: 'choose option...'} );
+        this.setState( {filterValue: 'choose filter...'} );
 
     }
 
@@ -71,7 +65,9 @@ class List extends React.Component {
 
     filterShops = (tags) => {
     	let flag = true;
+
         this.state.filters.map((filterItem) => {
+        	console.log(filterItem, tags);
             if (tags.indexOf(filterItem) === -1)
             	{ flag = false; }
         })
@@ -79,13 +75,14 @@ class List extends React.Component {
     }
 
 	render(){
+
 		return (
                 <div className="list">
                   <div className="container">
-                    <h2> Showroom List </h2>
+                    <h2 className="listTitle"> Showroom List </h2>
 
                     <ListFilterBox  
-                        shops={this.state.shops}
+                        shops={this.props.shops}
                         filters={this.state.filters}
                         options={this.state.filterOptions}
                         value={this.state.filterValue}
@@ -96,12 +93,16 @@ class List extends React.Component {
 
                     <ListShopPanel 
                         shops = { //filter shops by tags to display in ShopPanel
-                        	this.state.shops.filter((shop) => {
-                        		return this.filterShops(shop.tags);
+                        	
+                        	this.props.shops.filter((shop) => {
+                        	    return this.filterShops(shop.tags);
                         	})
-                        } 
+                        }
+                        moveMarker={ this.props.moveMarker }
+
                     />
-                    
+
+
                   </div>
                 </div>
 			);

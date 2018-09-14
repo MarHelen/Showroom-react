@@ -1,0 +1,21 @@
+// _navigation.scss
+
+.navbar {
+	border: none;
+	background: $pink;
+}
+
+.serviceName {
+	display: flex;
+}
+
+.siteTitle {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.logo {
+	width: 25;
+	heigth: 25;
+	font-family: 'Open Sans', sans-serif;
+	mix-blend-mode: multiply;
+}

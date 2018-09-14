@@ -1,4 +1,4 @@
-//ListFilterBox.jsx
+// ListFilterBox.jsx
 
 import React from 'react';
 import { Button } from 'react-bootstrap';
@@ -10,10 +10,9 @@ const ListFilterBox = (props) => {
 		return(
 			<div>
 
-    			<form onSubmit={props.handleSubmit}>
-                    <label>
-                        Filter:  
-                        <select 
+    			<form className="filerBox" onSubmit={props.handleSubmit}>
+                    <label> 
+                        <select className="filerBox styled-select"
                             value={props.value} 
                             onChange={props.handleChange}>
                             { props.options.map((filter) => 
@@ -25,12 +24,13 @@ const ListFilterBox = (props) => {
                             )}
                         </select>
                     </label>
-                    <input type="submit" value="Add" />
+                    <input className="formInput" type="submit" value="Add" />
                 </form>    
 
-                <div>
+                <div className="filterButton">
                     { props.filters.map( (filter) => 
                     	<Button 
+                    		className="filterButton"
                     	    bsStyle="info" 
                     	    bsSize='xsmall' 
                     	    key={uuid()} 

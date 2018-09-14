@@ -47,7 +47,8 @@ const config = {
     devtool: 'cheap-module-eval-source-map',
     devServer: {
       contentBase: __dirname,
-      historyApiFallback: true
+      historyApiFallback: true,
+      hot: true
     }
 };
 module.exports = config;

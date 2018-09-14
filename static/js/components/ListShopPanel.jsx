@@ -6,6 +6,8 @@ import uuid from 'uuid';
 import ListItem from'./ListItem';
 
 const ListShopPanel = (props) => {
+	//console.log('ListShopPanel');
+	//console.log(props.shops);
         return (
             <div>
                 <PanelGroup accordion id="accordion-example"> 
@@ -13,7 +15,8 @@ const ListShopPanel = (props) => {
                	        
                	        <ListItem 
                	            key={uuid()} 
-               	            shop={shop} 
+               	            shop={shop}
+               	            moveMarker={props.moveMarker}
                	        /> 
 
                	    )}

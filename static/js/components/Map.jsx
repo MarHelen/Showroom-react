@@ -1,23 +1,24 @@
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
+import uuid from 'uuid';
 
 const MyMap = withScriptjs(withGoogleMap((props) =>
   <GoogleMap
     defaultZoom={8}
-    defaultCenter={{ lat: -34.397, lng: 150.644 }}
+    defaultCenter={{ lat: 50.4501, lng: 30.5234 }} //Kyiv city center
   >
-    {props.isMarkerShown && <Marker position={{ lat: -34.397, lng: 150.644 }} />}
+    {props.isMarkerShown && props.shops.map((shop) => 
+      { console.log(shop.locationLat);
+        return <Marker key={shop.name} 
+                       position={{ lat: {shop.locationLat}, 
+                                   lng: {shop.locationLng} }} 
+        />
+      }
+    )}
+      
   </GoogleMap>
   ))
 
-//<MyMap isMarkerShown />// Map with a Marker
-//<MyMap isMarkerShown={false} />// Just only Map
 
-/*<MyMap
-  isMarkerShown
-  googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
-  loadingElement={<div style={{ height: `100%` }} />}
-  containerElement={<div style={{ height: `400px` }} />}
-  mapElement={<div style={{ height: `100%` }} />}
-/>*/
+
 
 export default MyMap;

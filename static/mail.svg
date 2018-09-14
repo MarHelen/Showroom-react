@@ -1,0 +1,30 @@
+<?xml version="1.0"?><svg width="730.03" height="628.19" xmlns="http://www.w3.org/2000/svg">
+ <title>pink-email-icon-gradient-3</title>
+ <defs>
+  <radialGradient id="svg_2" spreadMethod="pad" cx="0.5" cy="0.155208" gradientTransform="translate(0,0.10168822880448966) scale(1,0.3448275862068966)" r="1.239432">
+   <stop stop-color="#ff6db3" stop-opacity="0.992188" offset="0"/>
+   <stop stop-color="#ff007f" offset="1"/>
+  </radialGradient>
+ </defs>
+ <g display="inline">
+  <title>Layer 2</title>
+  <g id="g1402">
+   <path d="m132.001526,12.913726c-43.342819,0 -67.707474,22.40907 -67.707474,68.195046l0,471.986198c0,42.826843 21.905754,65.25061 65.212891,65.25061l473.980545,0c43.309265,0 65.248596,-21.307007 65.248596,-65.25061l0,-471.986198c0,-44.669243 -21.939331,-68.195046 -66.608521,-68.195046c0,0 -470.276001,-0.148901 -470.126038,0l0,0z" id="path1404" stroke="#ffffff" fill="url(#svg_2)"/>
+  </g>
+ </g>
+ <g display="inline">
+  <title>Layer 1</title>
+  <g id="g8564">
+   <g id="g1406">
+    <path d="m569.372009,469.471985l0,-300.813965l-408.71402,0l0,300.813965l408.71402,0z" id="path1408" stroke="#ffffff" fill="none" stroke-width="34" stroke-linejoin="round"/>
+    <path d="m365.014008,319.06601" id="path1410" stroke="#ffffff" stroke-width="34" fill="none" stroke-linejoin="round"/>
+    <path d="m165.514008,463.56601l140.095001,-142.106018" id="path1414" stroke="#ffffff" stroke-width="34" fill="none" stroke-linejoin="round"/>
+    <path d="m562.966003,461.973999l-136.451996,-138.598999" id="path1416" stroke="#ffffff" stroke-width="34" fill="none" stroke-linejoin="round"/>
+   </g>
+  </g>
+ </g>
+ <g display="inline">
+  <title>Layer 3</title>
+  <path d="m165.460007,172.490005l176.319992,178.667984c13.069,13.170013 36.847992,13.014008 49.640991,0.120026l176.199005,-177.350021" id="path1412" stroke="#ffffff" fill="none" stroke-width="34"/>
+ </g>
+</svg>

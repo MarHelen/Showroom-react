@@ -1,0 +1,73 @@
+// _listItem.scss
+
+.listItemGlyph {
+	align: right;
+}
+
+.panelImage {
+	width: 50;
+	heigth: 50;
+	overflow: hidden;
+}
+
+.tags {
+	margin-top: 10px;
+}
+
+.shopPanel {
+	font-family: 'Montserrat', sans-serif;
+}
+
+Panel.Heading {
+	border-top: none;
+	border-right: none;
+	border-left: none;
+
+	cursor:'pointer';
+	border-width: 1px;
+	
+}
+
+.panelHead {
+	cursor:'pointer';
+}
+
+.glyph {
+	align-content: flex-end;
+}
+
+.shopDetailsBlock {
+	margin-left: 20;
+	font-family: 'Montserrat', sans-serif;
+	text-align: justify;
+}
+
+.shopAddressBlock {
+	margin-left: 5;
+	margin-top: 10px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.shopHoursBlock {
+	margin-left: 20;
+	font-family: 'Montserrat', sans-serif;
+	text-align: justify;
+	margin-top:5px;
+}
+
+.shopContactsBlock {
+	margin-top:15px;
+	font-family: 'Open Sans', sans-serif, 400,800i;
+}
+
+.glyphButton {
+	border: none;
+}
+
+.profile_pic_small {
+	width: 100;
+}
+
+.profile_pic_large {
+	width: 300;
+}

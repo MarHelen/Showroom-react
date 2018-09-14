@@ -8,12 +8,12 @@ const logo = require('!!url-loader!../../img/shop.jpeg');
 
 const Navigation = (props) => {
     return (
-      <Navbar>
+      <Navbar bsClass="navbar">
         <Navbar.Header>
           <Navbar.Brand>
               <Link to='/'>
-                  <div id='block_container'>
-                  <img className='logo' src={logo}/>
+                  <div id='block_container' className="siteTitle">
+                  <img className='logo' src={logo}/>             
                   Kyiv Showrooms
                   </div>
               </Link>

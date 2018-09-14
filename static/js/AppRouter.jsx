@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 import App from "./App.jsx";
 import Showroom from './components/Showroom.jsx';
+import PageNotFound from './components/PageNotFound.jsx';
 
 
 
@@ -18,8 +19,8 @@ const AppRouter = () => (
 	  <div>
 	    <Switch>
 	      <Route path='/' component={App} exact={true} />
-	      <Route path='/:showroom_id' component={Showroom} />
-	      <Route component={NotFoundPage} />
+	      <Route path='/showrooms/:showroom_name' component={Showroom} />
+	      <Route component={PageNotFound} />
 	    </Switch>
 	  </div>
 	</BrowserRouter>
