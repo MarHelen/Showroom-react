@@ -7,7 +7,7 @@ server-side/
 *node_modules/*
 static/node_modules/
 static/dist/*
-config
+config.py
 *.sql
 *.txt
 
